@@ -28,6 +28,7 @@ npm install -g sass
 npm install --save-dev sass
 npm start
 ```
+You will also need your own project on the Spotify Developer Dashboard. 
 
 ## References
 Spotify Web API: https://developer.spotify.com/documentation/web-api/
