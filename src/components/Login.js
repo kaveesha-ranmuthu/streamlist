@@ -11,9 +11,9 @@ const getState = (length) => {
   return state;
 };
 
-const CLIENT_ID = "95924e3c172d415399023262a058e161";
+const CLIENT_ID = // Client number goes here;
 const RESPONSE_TYPE = "token";
-const REDIRECT_URI = "https://streamlist.netlify.app/"; //"https://streamlist.netlify.app/"; "http://localhost:3000/";
+const REDIRECT_URI =  "http://localhost:3000/";
 const STATE = getState(10);
 const SCOPE_LIST = [
   "streaming",
