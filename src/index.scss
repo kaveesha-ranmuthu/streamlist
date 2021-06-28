@@ -1,0 +1,385 @@
+$cream: #dac6c3;
+$beige: #eddcd9;
+$pink: #de5499;
+$yellow: #e99f4c;
+$black: #1a1a1a;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&family=Work+Sans:wght@200;300;400&display=swap");
+
+@keyframes grid-animation {
+  from {
+    margin-top: 80px;
+    opacity: 0;
+  }
+  to {
+    margin-top: 60px;
+    opacity: 1;
+  }
+}
+
+::selection {
+  background-color: $cream;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: $beige;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.title {
+  color: $yellow;
+  font-size: 60px;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  font-family: "Montserrat", sans-serif;
+  margin-left: 6px;
+  text-align: center;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+#login-button {
+  text-align: center;
+  height: 150px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  h1 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    padding-left: 8px;
+  }
+
+  a {
+    background-color: $pink;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 2px;
+    padding: 15px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+
+    &:hover {
+      background-color: #db4590;
+      cursor: pointer;
+    }
+  }
+}
+
+#dashboard {
+  color: $black;
+  text-align: center;
+  font-family: "Work Sans", sans-serif;
+  width: 100%;
+  font-size: 25px;
+
+  #input-label {
+    color: $pink;
+    margin-bottom: 20px;
+  }
+
+  input {
+    max-width: 80%;
+    width: 420px;
+    height: 25px;
+    background-color: transparent;
+    border-bottom: 1px solid $black;
+    border-style: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    font-family: "Work Sans", sans-serif;
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-bottom: 12px;
+    font-size: 18px;
+    color: $black;
+    text-align: center;
+    caret-color: $black;
+    -webkit-appearance: none;
+    box-shadow: none;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+}
+
+#no-results {
+  margin-top: 100px;
+  font-size: 18px;
+}
+
+#grid {
+  padding-left: 100px;
+  padding-right: 100px;
+  margin-top: 60px;
+  animation-name: grid-animation;
+  animation-duration: 0.8s;
+  width: auto;
+}
+
+.grid-item {
+  opacity: 0.8;
+  // border: 2px solid red;
+
+  &:hover {
+    cursor: pointer;
+    transform: scale(1.15);
+    opacity: 1;
+  }
+  img {
+    width: 200px;
+    box-shadow: 4px 4px 3px #d8c7c5;
+  }
+
+  h3 {
+    font-size: 15px;
+    margin-bottom: 6px;
+  }
+
+  p {
+    font-size: 15px;
+    margin-top: 0;
+  }
+}
+
+#song-selected {
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-family: "Work Sans", sans-serif;
+
+  img {
+    width: 200px;
+    box-shadow: 4px 4px 3px #d8c7c5;
+  }
+
+  #title {
+    font-size: 15px;
+    margin-bottom: 6px;
+    margin-top: 6px;
+    color: $black;
+  }
+
+  #artist {
+    font-size: 15px;
+    margin-top: 0;
+    color: $black;
+  }
+
+  #question {
+    font-size: 25px;
+    margin-bottom: 35px;
+    color: $black;
+  }
+
+  button {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    width: 275px;
+    letter-spacing: 2px;
+    padding: 15px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  #yes-but {
+    background-color: $yellow;
+    border: 1px solid $yellow;
+    color: white;
+
+    &:hover {
+      background-color: rgb(230, 146, 50);
+      cursor: pointer;
+    }
+  }
+
+  #no-but {
+    background-color: transparent;
+    color: $black;
+    border: 1px solid $black;
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+    &:hover {
+      border-color: $pink;
+      cursor: pointer;
+      color: $pink;
+    }
+  }
+}
+
+#playlist-created {
+  width: 90%;
+  text-align: center;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -43%);
+  font-family: "Work Sans", sans-serif;
+
+  h3 {
+    font-size: 20px;
+    color: $black;
+  }
+
+  a,
+  button {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 15px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  #see-pl {
+    background-color: $pink;
+    border: 1px solid $pink;
+    color: white;
+    width: 250px;
+
+    &:hover {
+      background-color: #db4590;
+      cursor: pointer;
+    }
+  }
+
+  #make {
+    width: 300px;
+    background-color: $yellow;
+    border: 1px solid $yellow;
+    color: white;
+    margin-bottom: 10px;
+    margin-top: 20px;
+
+    &:hover {
+      background-color: rgb(230, 146, 50);
+      cursor: pointer;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  #login-button h1,
+  #dashboard h1,
+  #selected-song-cont h1,
+  #playlist-create-cont h1 {
+    font-size: 40px;
+  }
+
+  #dashboard p {
+    font-size: 20px;
+  }
+  #grid {
+    padding-left: 190px;
+    padding-right: 100px;
+  }
+}
+
+@media (max-width: 540px) {
+  #grid {
+    padding-left: 165px;
+    padding-right: 100px;
+  }
+}
+
+@media (max-width: 500px) {
+  #grid {
+    padding-left: 150px;
+    padding-right: 100px;
+  }
+}
+
+@media (max-width: 450px) {
+  #grid {
+    padding-left: 107px;
+    padding-right: 100px;
+  }
+}
+
+@media (max-width: 400px) {
+  #login-button h1,
+  #dashboard h1,
+  #selected-song-cont h1,
+  #playlist-create-cont h1 {
+    font-size: 30px;
+  }
+  #dashboard p {
+    font-size: 15px;
+  }
+  #grid {
+    padding-left: 90px;
+    padding-right: 100px;
+  }
+}
+
+@media (max-height: 400px) {
+  #login-button h1,
+  #dashboard h1,
+  #selected-song-cont h1,
+  #playlist-create-cont h1 {
+    font-size: 30px;
+  }
+  #dashboard p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 360px) {
+  #grid {
+    padding-left: 80px;
+    padding-right: 100px;
+  }
+}
+
+@media (max-width: 320px) {
+  #grid {
+    padding-left: 60px;
+    padding-right: 100px;
+  }
+}
+
+@media (max-width: 300px) {
+  #login-button h1,
+  #dashboard h1,
+  #selected-song-cont h1,
+  #playlist-create-cont h1 {
+    font-size: 25px;
+  }
+  #grid {
+    padding-left: 40px;
+    padding-right: 100px;
+  }
+
+  #playlist-created #see-pl {
+    width: 200px;
+  }
+  #playlist-created #make {
+    width: 250px;
+  }
+}
